@@ -1,4 +1,5 @@
-# CadastroCursos
+# Cadastro de Cursos com Angular 8 consumindo API-REST
+[ aplicação foi desenvolvida com Angular 8 para consumir API-REST ]
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
