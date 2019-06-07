@@ -1,0 +1,16 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "php",
+      "instituicao": "alura",
+      "duracao": 220
+    },
+    {
+      "nome": "java22",
+      "instituicao": "udemy22",
+      "duracao": 1022,
+      "id": 2
+    }
+  ]
+}

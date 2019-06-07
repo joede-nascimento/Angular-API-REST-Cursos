@@ -1,0 +1,27 @@
+<form class="local-margin-top" [formGroup]="formulario" (ngSubmit)="atualizarcurso()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" formControlName="nome" class="form-control" id="nome" placeholder="O nome do curso">
+    </div>
+  
+    <div class="form-group">
+      <label for="instituicao">Nome</label>
+      <input type="text" formControlName="instituicao" class="form-control" id="instituicao" placeholder="o nome da instituição">
+    </div>
+  
+    <div class="form-group">
+      <label for="duracao">Duracao/Horas</label>
+      <input type="number" formControlName="duracao" class="form-control" id="duracao" placeholder="ex: 20">
+    </div>  
+  
+    <button [disabled]="formulario.invalid" type="submit" class="btn btn-warning">Atualizar</button>
+  
+  </form>
+
+  <!-- mensagens -->
+  <div class="alert alert-success local-margin-top" *ngIf="mostraMsgResul == 'success'" role="alert">
+      O curso foi atualizado para {{ nomeCurso }}
+    </div>
+    <div class="alert alert-danger local-margin-top" *ngIf="mostraMsgResul == 'error'" role="alert">
+      :( Erro ao tentar atualizar curso
+    </div>

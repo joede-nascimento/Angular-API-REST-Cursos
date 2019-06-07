@@ -1,0 +1,27 @@
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Instituição</th>
+        <th scope="col">Duração/Horas</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curso of cursos">
+        <th scope="row">{{ curso.id }}</th>
+        <td>{{ curso.nome }}</td>
+        <td>{{ curso.instituicao }}</td>
+        <td>{{ curso.duracao }}</td>
+        <td>
+          <button routerLink="/editar-curso/{{ curso.id }}" class="btn btn-warning">Editar</button>
+          <button (click)="removerCurso(curso.id)" class="btn btn-danger">Remover</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="alert alert-danger " *ngIf="!cursos.length" role="alert">
+     :( Erro ao carregar lista de cursos. Tente novamente mais tarde
+  </div>

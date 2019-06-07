@@ -1,0 +1,26 @@
+<form class="local-margin-top" [formGroup]="formulario" (ngSubmit)="adicionarCurso()">
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="o nome do curso">
+  </div>
+
+  <div class="form-group">
+    <label for="instituicao">Instituicao</label>
+    <input type="text" class="form-control" formControlName="instituicao" id="instituicao" placeholder="o nome da instituição">
+  </div>
+
+  <div class="form-group">
+    <label for="duracao">Duracao/Horas</label>
+    <input type="number" class="form-control" formControlName="duracao" id="duracao" placeholder="ex: 20">
+  </div>  
+
+  <button [disabled]="formulario.invalid" type="submit" class="btn btn-primary">Adicionar</button>
+
+</form>
+<!-- mensagens -->
+<div class="alert alert-success local-margin-top" *ngIf="mostraMsgResult == 'success'" role="alert">
+    O curso {{ nomeCurso }} foi Adicionado com sucesso
+  </div>
+  <div class="alert alert-danger local-margin-top" *ngIf="mostraMsgResult == 'error'" role="alert">
+    :( erro ao tentar adicionar curso
+  </div>
