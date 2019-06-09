@@ -11,6 +11,18 @@
       "instituicao": "udemy22",
       "duracao": 1022,
       "id": 2
+    },
+    {
+      "nome": "angular 8",
+      "instituicao": "Udemy",
+      "duracao": 21,
+      "id": 3
+    },
+    {
+      "nome": "html5",
+      "instituicao": "Udemy",
+      "duracao": 3,
+      "id": 4
     }
   ]
 }

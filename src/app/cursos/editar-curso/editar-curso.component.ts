@@ -64,4 +64,8 @@ export class EditarCursoComponent implements OnInit {
     );
   }
 
+  mostraErro(campo){
+    return campo.invalid && campo.touched;
+  }
+
 }

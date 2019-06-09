@@ -45,4 +45,8 @@ export class AdicionarCursoComponent implements OnInit {
     );
   }
 
+  mostraErro(campo){
+    return campo.invalid && campo.touched;
+  }
+
 }

@@ -2,16 +2,29 @@
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="o nome do curso">
+    
+    <div class="alert alert-danger" role="alert"
+    *ngIf="mostraErro(formulario.get('nome'))">
+      O nome é obrigatório
+    </div>
   </div>
 
   <div class="form-group">
     <label for="instituicao">Instituicao</label>
     <input type="text" class="form-control" formControlName="instituicao" id="instituicao" placeholder="o nome da instituição">
+    <div class="alert alert-danger" role="alert"
+    *ngIf="mostraErro(formulario.get('instituicao'))">
+      A instituição é obrigatória
+    </div>
   </div>
 
   <div class="form-group">
     <label for="duracao">Duracao/Horas</label>
     <input type="number" class="form-control" formControlName="duracao" id="duracao" placeholder="ex: 20">
+    <div class="alert alert-danger" role="alert"
+    *ngIf="mostraErro(formulario.get('duracao'))">
+      A duração é obrigatória
+    </div>
   </div>  
 
   <button [disabled]="formulario.invalid" type="submit" class="btn btn-primary">Adicionar</button>
